@@ -1,7 +1,9 @@
-<script setup>
-
+<script lang="ts" setup>
+    import Card from '@/components/Card.vue';
 </script>
 
 <template>
-    Hello World
+    <div id="main" class="flex">
+        <Card />
+    </div>
 </template>
