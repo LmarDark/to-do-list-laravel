@@ -9,7 +9,7 @@
     <Head :title="uri"/>
 
     <div id="main" class="flex">
-        <Card :title :description/>
+        <Card :title :text/>
     </div>
 
 </template>
@@ -27,13 +27,9 @@
                 type: String
             },
 
-            description: {
+            text: {
                 type: String
             },
-
-            checklist : {
-                type: Array
-            }
         }
     }
 </script>

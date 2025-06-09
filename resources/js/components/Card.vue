@@ -24,10 +24,6 @@
             text: {
                 type: String
             }, 
-
-            checklist : {
-                type: Array
-            }
         }
     }
 </script>
