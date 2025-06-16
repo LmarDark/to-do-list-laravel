@@ -33,7 +33,7 @@ class CardsController extends Controller
         ];
 
         return $card;
-    } 
+    }
 
     public static function read($uri) {
         $card = CardsModel::where('href', $uri)->first();
