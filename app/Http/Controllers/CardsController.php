@@ -45,7 +45,7 @@ class CardsController extends Controller
                 "card" => $card
             ]);
 
-        } else if (!empty($card) && $uri == $card->href) {
+        } else if (!empty($card) && $uri === $card->href) {
             $card = [
                 'title'       => $card->card_title,
                 'description' => json_decode($card->card_description),
