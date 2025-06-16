@@ -1,17 +1,14 @@
 <script lang="ts" setup>
     import { Head } from '@inertiajs/vue3';
     import Card from '@/components/Card.vue';
-
-
 </script>
 
 <template>
     <Head :title="uri"/>
-
+    
     <div id="main" class="flex">
-        <Card :title :text/>
+        <Card :card/>
     </div>
-
 </template>
 
 <script lang="ts">
@@ -23,13 +20,14 @@
 
     export default {
         props: {
-            title: {
-                type: String
+            card: {
+                type: Array,
+                required: true
             },
-
-            text: {
-                type: String
-            },
+        },
+        mounted() {
+            console.log(this.card); // Use "this." para acessar props
         }
     }
+    
 </script>

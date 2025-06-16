@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('card_title');
             $table->string('card_description');
-            $table->string('href');
+            $table->string('href')->unique();
             $table->timestamps();
         });
     }
