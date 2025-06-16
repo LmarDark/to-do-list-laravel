@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-    let uri = window.location.pathname;
+    let uri = window.location.pathname.replace(/^\/+/, '');
 
     if(uri === "/") {
         uri = "";
@@ -25,9 +25,6 @@
                 required: true
             },
         },
-        mounted() {
-            console.log(this.card); // Use "this." para acessar props
-        }
     }
     
 </script>

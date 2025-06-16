@@ -22,7 +22,7 @@ class CardsController extends Controller
     public static function create($uri) {
         $CardsModel = CardsModel::create([
             "card_title"       => "Insira o título aqui",
-            "card_description" => "Insira a descrição da sua tarefa",
+            "card_description" => json_encode(["Insira a descrição da sua tarefa"], JSON_UNESCAPED_UNICODE),
             "href"             => "$uri"
         ]);
         
@@ -48,7 +48,7 @@ class CardsController extends Controller
         } else if (!empty($card) && $uri == $card->href) {
             $card = [
                 'title'       => $card->card_title,
-                'description' => $card->card_description,
+                'description' => json_decode($card->card_description),
                 'uri'         => $card->uri
             ];
 
